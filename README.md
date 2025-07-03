@@ -29,6 +29,15 @@
 ![Car](./screenshots/Car.png)  
 *图：客户端小车窗口，用户可控制车辆移动*
 
+![CarEnter](./screenshots/CarEnter.png)  
+*图：小车移动至停车场门口*
+
+![UpdatwParkingManager](./screenshots/UpdateParkingManager.png)  
+*图：小车进入停车场后，服务器端更新*
+
+![Highlight]./screenshots/Highlight.png)  
+*图：服务器端高亮显示*
+
 ## ▶️ 使用说明
 
 1. **启动项目**  
