@@ -35,7 +35,7 @@
 ![UpdatwParkingManager](./screenshots/UpdateParkingManager.png)  
 *图：小车进入停车场后，服务器端更新*
 
-![Highlight]./screenshots/Highlight.png)  
+![Highlight](./screenshots/Highlight.png)  
 *图：服务器端高亮显示*
 
 ## ▶️ 使用说明
