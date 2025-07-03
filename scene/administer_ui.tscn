@@ -1,0 +1,283 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxmwctxr27she"]
+
+[ext_resource type="Theme" uid="uid://ckkovcoarm8sp" path="res://assert/theme.tres" id="1_7uu02"]
+[ext_resource type="Script" uid="uid://d0ye217n8icpk" path="res://scene/administer_ui.gd" id="1_s77o4"]
+[ext_resource type="PackedScene" uid="uid://j815h02hurxq" path="res://scene/car.tscn" id="2_s6x54"]
+[ext_resource type="PackedScene" uid="uid://clnnl4ka0b55f" path="res://scene/car_window.tscn" id="3_oel4k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oel4k"]
+bg_color = Color(0.772209, 0.79585, 0.925372, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oel4k"]
+
+[node name="AdministerUI" type="CanvasLayer"]
+script = ExtResource("1_s77o4")
+car_scene = ExtResource("2_s6x54")
+car_window_scene = ExtResource("3_oel4k")
+
+[node name="Main" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 637.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="SpawnCar" type="MarginContainer" parent="Main"]
+custom_minimum_size = Vector2(128, 64)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/SpawnCar"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="Label" type="RichTextLabel" parent="Main/SpawnCar/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.46617, 0.649687, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "Generate
+New Car"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnterID" type="Button" parent="Main/SpawnCar/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_7uu02")
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.87451, 0.4, 0.839216, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "ADD"
+
+[node name="InputID" type="MarginContainer" parent="Main"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_top = 256
+
+[node name="Panel" type="PanelContainer" parent="Main/InputID"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_7uu02")
+theme_override_styles/panel = SubResource("StyleBoxFlat_oel4k")
+
+[node name="Margin" type="MarginContainer" parent="Main/InputID/Panel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/InputID/Panel/Margin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="Label" type="RichTextLabel" parent="Main/InputID/Panel/Margin/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.46617, 0.649687, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 64
+text = "Input ID"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IDEditor" type="TextEdit" parent="Main/InputID/Panel/Margin/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 48)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_7uu02")
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.932039, 0.45345, 0.340796, 1)
+theme_override_colors/font_color = Color(0.87451, 0.4, 0.839216, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oel4k")
+placeholder_text = "Input your ID"
+autowrap_mode = 1
+scroll_fit_content_height = true
+scroll_fit_content_width = true
+caret_blink = true
+
+[node name="GenerateNewCar" type="Button" parent="Main/InputID/Panel/Margin/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_7uu02")
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.87451, 0.4, 0.839216, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 64
+text = "ok"
+
+[node name="ParkingInformation" type="MarginContainer" parent="Main"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/ParkingInformation"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Parking1" type="RichTextLabel" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "1 : Empty"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Parking2" type="RichTextLabel" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "2 : Empty"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Parking3" type="RichTextLabel" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "3 : Empty"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Parking4" type="RichTextLabel" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "4 : Empty"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Parking5" type="RichTextLabel" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "5 : Empty"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Parking6" type="RichTextLabel" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "6 : Empty"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Parking7" type="RichTextLabel" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "7 : Empty"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Parking8" type="RichTextLabel" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48
+text = "8 : Empty"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="ChangeState" type="Button" parent="Main/ParkingInformation/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_7uu02")
+theme_override_font_sizes/font_size = 48
+text = "Show"
+alignment = 0

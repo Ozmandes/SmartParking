@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://df6iaceo3qdy4"]
+
+[ext_resource type="Script" uid="uid://fpyfdhkb4sdq" path="res://scene/hover_label.gd" id="1_lxhm3"]
+[ext_resource type="Theme" uid="uid://ckkovcoarm8sp" path="res://assert/theme.tres" id="1_rv2dh"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lxhm3"]
+viewport_path = NodePath("Sprite3D/SubViewport")
+
+[node name="HoverLabel" type="Node3D"]
+script = ExtResource("1_lxhm3")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_lxhm3")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D"]
+transparent_bg = true
+size = Vector2i(1280, 720)
+
+[node name="MarginContainer" type="MarginContainer" parent="Sprite3D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Sprite3D/SubViewport/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_rv2dh")
+theme_override_colors/font_color = Color(0.97119, 0.6138, 0.99, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 32
+theme_override_font_sizes/font_size = 160
+text = "test"

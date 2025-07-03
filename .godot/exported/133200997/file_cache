@@ -1,0 +1,13 @@
+res://assert/theme.tres::3e32c63bd013ea40536c47f63cf308e1::1749485378::res://.godot/exported/133200997/export-35855c74b870843630e8be1af9115656-theme.res
+res://scene/administer_ui.tscn::ce8659e2b8bbf5e4d2cfd93d67b0fa6e::1749517599::res://.godot/exported/133200997/export-2d35d4a81727bf422d2086a1a9fede00-administer_ui.scn
+res://scene/camera.tscn::9bfdae481a4979efe55e88bd62384046::1749478182::res://.godot/exported/133200997/export-febfef0dde6f5b2555e647d19209e801-camera.scn
+res://scene/car.tscn::a85ad23d72e8f6fd892f10dbbe87b28e::1749517600::res://.godot/exported/133200997/export-423d6a6c47e80fa792fb620b140807d8-car.scn
+res://scene/car_sensor.tscn::efa3ff75be2624e5d6f118cb4e4237b9::1749517600::res://.godot/exported/133200997/export-3799300a96ba2b6def7c6e88d4ee6ff6-car_sensor.scn
+res://scene/car_window.tscn::1d0143dc3c902980382d3a3e102f9e1d::1749519678::res://.godot/exported/133200997/export-31ae30398424811f1353a3a3239623bb-car_window.scn
+res://scene/check_point.tscn::03f08132ac2fe00c6673efaa7c4e7244::1749517599::res://.godot/exported/133200997/export-de39423596a9e81a0c22edc51339dcf0-check_point.scn
+res://scene/hover_label.tscn::3de870a9dfc5ed91df357d81167cb89c::1749521686::res://.godot/exported/133200997/export-422e4e860f6e0e6ee744dc211782a87f-hover_label.scn
+res://scene/main.tscn::b2025c8bbad575025974367adff9f4e8::1749517599::res://.godot/exported/133200997/export-fa9c8ff5b16a5ec23280afa6577b07ee-main.scn
+res://scene/main_menu.tscn::057b37016afa73bb3fb8bac7e27dc5f0::1749517600::res://.godot/exported/133200997/export-5004891b3c37f00fbb846473dbb63447-main_menu.scn
+res://scene/map.tscn::2fb5f0d792b143df2c86948e37216910::1749517600::res://.godot/exported/133200997/export-78db744b64a7bb3b84b042cabd134fef-map.scn
+res://scene/parking.tscn::468a7932f74ed7d0212be6c0ad536cd2::1749517599::res://.godot/exported/133200997/export-6834d613e6bae7e305def71cc15791f3-parking.scn
+res://scene/parking_manager.tscn::ecff15bb4550b5599e46274531c4ae0e::1749517599::res://.godot/exported/133200997/export-a29e3e18676169a483f646901f049602-parking_manager.scn

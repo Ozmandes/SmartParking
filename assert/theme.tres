@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://ckkovcoarm8sp"]
+
+[ext_resource type="FontFile" uid="uid://ddkcnktllr4j1" path="res://assert/Kaph-Regular.ttf" id="1_km0e3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76jpk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ld0ah"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_km0e3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8tl8f"]
+
+[resource]
+default_font = ExtResource("1_km0e3")
+default_font_size = 32
+Button/colors/font_color = Color(0.87451, 0.4, 0.839216, 1)
+Button/colors/font_hover_color = Color(0.93, 0.689595, 0.4929, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.93, 0.505455, 0.1581, 1)
+Button/constants/outline_size = 8
+Button/styles/focus = SubResource("StyleBoxEmpty_76jpk")
+Button/styles/hover = SubResource("StyleBoxEmpty_ld0ah")
+Button/styles/normal = SubResource("StyleBoxEmpty_km0e3")
+Button/styles/pressed = SubResource("StyleBoxEmpty_8tl8f")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb0yb55kl1gjj"]
+
+[ext_resource type="Theme" uid="uid://ckkovcoarm8sp" path="res://assert/theme.tres" id="1_3er1b"]
+[ext_resource type="Script" uid="uid://dx08pio0c0arg" path="res://scene/main_menu.gd" id="1_hxu56"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3er1b"]
+bg_color = Color(0.846161, 0.775209, 0.870515, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hxu56")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_3er1b")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3er1b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+
+[node name="Welcome" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_3er1b")
+theme_override_colors/default_color = Color(0.553583, 0.810353, 0.620554, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[wave freq=6 amp=30]Welcom to
+Parking System"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_3er1b")
+theme_override_font_sizes/font_size = 96
+text = "Start"

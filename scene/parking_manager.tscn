@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg3x606d7ynec"]
+
+[ext_resource type="Script" uid="uid://cj5quv4tmncfb" path="res://scene/parking_manager.gd" id="1_n43g6"]
+[ext_resource type="PackedScene" uid="uid://dvandnc01ubuh" path="res://scene/parking.tscn" id="2_h40cn"]
+
+[node name="ParkingManager" type="Node3D"]
+script = ExtResource("1_n43g6")
+
+[node name="FirstRow" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1)
+
+[node name="Parking1" parent="FirstRow" instance=ExtResource("2_h40cn")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, -0.1)
+parking_id = 1
+
+[node name="Parking2" parent="FirstRow" instance=ExtResource("2_h40cn")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, -0.1)
+parking_id = 2
+
+[node name="Parking3" parent="FirstRow" instance=ExtResource("2_h40cn")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, -0.1)
+parking_id = 3
+
+[node name="Parking4" parent="FirstRow" instance=ExtResource("2_h40cn")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, -0.1)
+parking_id = 4
+
+[node name="SecondRow" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1)
+
+[node name="Parking5" parent="SecondRow" instance=ExtResource("2_h40cn")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.7, 0, 0.1)
+parking_id = 5
+
+[node name="Parking6" parent="SecondRow" instance=ExtResource("2_h40cn")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.6, 0, 0.1)
+parking_id = 6
+
+[node name="Parking7" parent="SecondRow" instance=ExtResource("2_h40cn")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.6, 0, 0.1)
+parking_id = 7
+
+[node name="Parking8" parent="SecondRow" instance=ExtResource("2_h40cn")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.7, 0, 0.1)
+parking_id = 8

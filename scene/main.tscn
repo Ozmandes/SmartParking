@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bee1ex1m0cuv6"]
+
+[ext_resource type="PackedScene" uid="uid://dw54uksffpivc" path="res://scene/camera.tscn" id="1_itxqv"]
+[ext_resource type="PackedScene" uid="uid://1027p72hryys" path="res://scene/map.tscn" id="2_v0l8b"]
+[ext_resource type="PackedScene" uid="uid://bg3x606d7ynec" path="res://scene/parking_manager.tscn" id="2_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://cxmwctxr27she" path="res://scene/administer_ui.tscn" id="4_brvut"]
+[ext_resource type="PackedScene" uid="uid://bgkjt6k02oyp8" path="res://scene/check_point.tscn" id="5_0ha60"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Map" parent="." instance=ExtResource("2_v0l8b")]
+
+[node name="ParkingManager" parent="." groups=["parking_manager"] instance=ExtResource("2_wp4xf")]
+unique_name_in_owner = true
+
+[node name="Camera" parent="." instance=ExtResource("1_itxqv")]
+
+[node name="CheckPoint" parent="." instance=ExtResource("5_0ha60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="WindowSet" type="Node3D" parent="." groups=["window_set"]]
+
+[node name="SpawnCarPosition" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 6)
+
+[node name="AdministerUI" parent="." groups=["administer_ui"] instance=ExtResource("4_brvut")]

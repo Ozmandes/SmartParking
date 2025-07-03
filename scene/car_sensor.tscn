@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b34qyic3rusyp"]
+
+[ext_resource type="Script" uid="uid://y6a15kwbukmr" path="res://scene/car_sensor.gd" id="1_k7lj6"]
+
+[node name="CarSensor" type="Area3D"]
+collision_layer = 4
+collision_mask = 2
+input_ray_pickable = false
+script = ExtResource("1_k7lj6")
